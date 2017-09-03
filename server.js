@@ -22,7 +22,7 @@ var articleone=
     </p>    `
 };
 
-var htmltemplate=
+var htmlTemplate=
 `<html>
     <head>
         <title>
