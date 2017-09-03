@@ -5,21 +5,53 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleone=
-{
-    title: 'Article one | Sai Ram',
-    heading: 'Article one',
-    date: 'Sep 3,2017',
-    content: ` 
-    <p>
-            This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-    </p>
-    <p>
-            This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-    </p>
-    <p>
-            This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-    </p>    `
+var articles = {
+    'article-one': {
+        title: 'Article one | Sai Ram',
+        heading: 'Article one',
+        date: 'Sep 3,2017',
+        content: ` 
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>    `
+    },
+    'article-two': {
+        title: 'Article two | Sai Ram',
+        heading: 'Article two',
+        date: 'Sep 3,2017',
+        content: ` 
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>    `
+        
+    },
+    'article-three': {
+        title: 'Article three | Sai Ram',
+        heading: 'Article three',
+        date: 'Sep 3,2017',
+        content: ` 
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>
+        <p>
+                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+        </p>    `
+    },
 };
 
 function createTemplate (data) {
@@ -63,16 +95,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleone));
-});
-
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articlename', function (req, res) {
+  var articlename = req.params.articlename;
+  res.send(createTemplate(articles[articlename]));
 });
 
 app.get('/ui/style.css', function (req, res) {
