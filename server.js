@@ -19,8 +19,7 @@ var articleone=
     </p>
     <p>
             This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-    </p>
-    `
+    </p>    `
 };
 
 app.get('/', function (req, res) {
