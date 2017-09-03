@@ -40,7 +40,7 @@ var articles = {
     'article-three': {
         title: 'Article three | Sai Ram',
         heading: 'Article three',
-        date: 'Sep 3,2017',
+        date: 'Sep 13,2017',
         content: ` 
         <p>
                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
