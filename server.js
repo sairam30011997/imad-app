@@ -112,7 +112,7 @@ app.get('/test-db', function (req,res) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
-          res.send(JSON.stringify(result.rows));
+          res.send(JSON.stringify(result));
       }
   });
 });
@@ -129,7 +129,7 @@ app.get('/submit-name', function (req, res) {
     var name = req.query.name;
     names.push(name);
     //JSON: Javascript Object Notation
-    res.send(JSON.stringify());
+    res.send(JSON.stringify(names));
 });
 
 app.get('/:articlename', function (req, res) {
