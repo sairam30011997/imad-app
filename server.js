@@ -113,7 +113,7 @@ app.get('/test-db', function (req,res) {
       } else {
           res.send(JSON.stringify(result));
       }
-  })
+  });
 });
 
 var counter = 0;
