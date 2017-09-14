@@ -36,14 +36,8 @@ var articles = {
         date: 'Sep 3,2017',
         content: ` 
         <p>
-                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-        </p>
-        <p>
-                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-        </p>
-        <p>
-                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-        </p>    `
+                This is the second content.
+        </p>  `
         
     },
     'article-three': {
@@ -52,13 +46,7 @@ var articles = {
         date: 'Sep 13,2017',
         content: ` 
         <p>
-                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-        </p>
-        <p>
-                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
-        </p>
-        <p>
-                This is the content.This is the content.This is the content.This is the content.This is the content.This is the content
+                This is the third content.
         </p>    `
     },
 };
